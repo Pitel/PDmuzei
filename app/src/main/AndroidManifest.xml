@@ -9,7 +9,8 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="PDmuzei">
+        android:label="PDmuzei"
+        android:theme="@style/PDtheme">
         <service
             android:name=".PixelDailiesArtSource"
             android:description="@string/description"
@@ -21,7 +22,7 @@
 
             <meta-data
                 android:name="color"
-                android:value="#31a2f2" />
+                android:value="@color/logo" />
             <meta-data
                 android:name="settingsActivity"
                 android:value=".SettingsActivity" />
@@ -29,8 +30,8 @@
 
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/pixel_dailies"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/pixel_dailies" />
     </application>
 
 </manifest>
