@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="refresh"
+        android:title="@string/refresh"
+        android:summary="@string/in_minutes"
+        android:inputType="number"
+        android:hint="@string/minutes"
+        android:defaultValue="60" />
+    <CheckBoxPreference
+        android:key="https"
+        android:title="@string/paranoid"
+        android:summary="@string/https"
+        android:defaultValue="false" />
+</PreferenceScreen>

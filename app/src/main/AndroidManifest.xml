@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cz.pitel.pdmuzei">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PDmuzei">
+        <service
+            android:name=".PixelDailiesArtSource"
+            android:description="@string/description"
+            android:icon="@drawable/mask"
+            android:label="Pixel Dailies">
+            <intent-filter>
+                <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource" />
+            </intent-filter>
+
+            <meta-data
+                android:name="color"
+                android:value="#31a2f2" />
+            <meta-data
+                android:name="settingsActivity"
+                android:value=".SettingsActivity" />
+        </service>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/pixel_dailies"
+            android:exported="true" />
+    </application>
+
+</manifest>

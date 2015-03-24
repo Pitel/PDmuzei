@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="description" translatable="false">Come and pixel art with us</string>
+    <string name="access_token" translatable="false">AAAAAAAAAAAAAAAAAAAAACNmewAAAAAANeeO9QhvdUJIqGQgWBj0Eb97kwk%3DNUWIQ3wuF5vg8cUYhExlM1GuG7aBxZbS63zCP6QItILKkv5a0Z</string>
+    <string name="pixel_dailies" translatable="false">Pixel Dailies</string>
+    <string name="paranoid">Paranoid mode</string>
+    <string name="https">Always use HTTPS</string>
+    <string name="refresh">Refresh interval</string>
+    <string name="in_minutes">In minutes</string>
+    <string name="minutes">Minutes</string>
+</resources>
