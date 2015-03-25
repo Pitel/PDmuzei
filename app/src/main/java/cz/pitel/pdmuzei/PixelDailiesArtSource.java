@@ -22,7 +22,7 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
     }
 
     @Override
-    protected void onTryUpdate(int reason) throws RetryException {
+    protected void onTryUpdate(final int reason) throws RetryException {
         if (BuildConfig.DEBUG) Log.d("PDmuzei", "onTryUpdate " + reason);
         HttpsURLConnection PDConnection = null;
         try {
