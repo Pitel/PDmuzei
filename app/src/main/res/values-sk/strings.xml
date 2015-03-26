@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="https">Vždy používat HTTPS</string>
-    <string name="in_minutes">V minutách</string>
-    <string name="minutes">Minuty</string>
-    <string name="paranoid">Paranoidní režim</string>
-    <string name="refresh">Interval obnovení</string>
+    <string name="https">Vždy používať HTTPS</string>
+    <string name="in_minutes">V minútach</string>
+    <string name="minutes">Minúty</string>
+    <string name="paranoid">Paranoidný režim</string>
+    <string name="refresh">Interval obnovenia</string>
 </resources>
