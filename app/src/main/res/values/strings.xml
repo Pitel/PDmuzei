@@ -8,4 +8,5 @@
     <string name="refresh">Refresh interval</string>
     <string name="in_minutes">In minutes</string>
     <string name="minutes">Minutes</string>
+    <string name="about">About</string>
 </resources>

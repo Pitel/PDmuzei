@@ -5,4 +5,5 @@
     <string name="minutes">Minúty</string>
     <string name="paranoid">Paranoidný režim</string>
     <string name="refresh">Interval obnovenia</string>
+    <string name="about">O aplikácii</string>
 </resources>

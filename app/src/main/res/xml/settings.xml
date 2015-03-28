@@ -12,4 +12,14 @@
         android:title="@string/paranoid"
         android:summary="@string/https"
         android:defaultValue="false" />
+    <PreferenceCategory android:title="@string/about">
+        <Preference
+            android:title="\@Pixel_Dailies"
+            android:summary="@string/description"
+            android:icon="@mipmap/ic_launcher">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.twitter.com/pixel_dailies" />
+        </Preference>
+    </PreferenceCategory>
 </PreferenceScreen>
