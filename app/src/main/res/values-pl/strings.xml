@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="https">Używać zawsze HTTPS</string>
+    <string name="in_minutes">W minutach</string>
+    <string name="minutes">Minuty</string>
+    <string name="paranoid">Tryb paranoiczny</string>
+    <string name="refresh">Interwał odświeżania</string>
+</resources>
