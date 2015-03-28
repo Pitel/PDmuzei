@@ -5,4 +5,5 @@
     <string name="minutes">Minuty</string>
     <string name="paranoid">Tryb paranoiczny</string>
     <string name="refresh">Interwał odświeżania</string>
+    <string name="about">O aplikacji</string>
 </resources>
