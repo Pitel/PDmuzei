@@ -73,7 +73,7 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
         short minutes;
         try {
             minutes = Short.parseShort(getSharedPreferences().getString("refresh", "60"));
-        } catch (NumberFormatException nfe) {
+        } catch (final NumberFormatException nfe) {
             minutes = 60;
         }
         if (minutes < 1) {
