@@ -1,9 +1,7 @@
 package cz.pitel.pdmuzei;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.google.android.apps.muzei.api.Artwork;
@@ -19,13 +17,12 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
     public PixelDailiesArtSource() {
-        super("PDmuzei");
+        super("PDmuzei"); //getString(R.string.app_name)
     }
 
     @Override
     protected void onTryUpdate(final int reason) throws RetryException {
         if (BuildConfig.DEBUG) Log.d("PDmuzei", "onTryUpdate " + reason);
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         HttpsURLConnection PDConnection = null;
         try {
             final String token = getString(R.string.access_token);
@@ -48,7 +45,7 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
                         final JSONObject photo = media.getJSONObject(m);
                         if (photo.getString("type").equals("photo")) {
                             final String media_url;
-                            if (prefs.getBoolean("https", false)) {
+                            if (getSharedPreferences().getBoolean("https", false)) {
                                 media_url = photo.getString("media_url_https");
                             } else {
                                 media_url = photo.getString("media_url");
@@ -74,7 +71,7 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
         }
         short minutes;
         try {
-            minutes = Short.parseShort(prefs.getString("refresh", "60"));
+            minutes = Short.parseShort(getSharedPreferences().getString("refresh", "60"));
         } catch (final NumberFormatException nfe) {
             minutes = 60;
         }

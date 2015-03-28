@@ -8,6 +8,7 @@ public class SettingsActivity extends PreferenceActivity {
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getPreferenceManager().setSharedPreferencesName("muzeiartsource_" + getString(R.string.app_name));
         addPreferencesFromResource(R.xml.settings);
     }
 }

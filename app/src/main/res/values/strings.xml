@@ -2,6 +2,7 @@
 <resources>
     <string name="description" translatable="false">Come and pixel art with us</string>
     <string name="pixel_dailies" translatable="false">Pixel Dailies</string>
+    <string name="app_name" translatable="false">PDmuzei</string>
     <string name="paranoid">Paranoid mode</string>
     <string name="https">Always use HTTPS</string>
     <string name="refresh">Refresh interval</string>
