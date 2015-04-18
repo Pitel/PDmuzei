@@ -35,7 +35,8 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
             for (int t = 0; t < PDJSON.length(); t++) {
                 final JSONObject tweet = PDJSON.getJSONObject(t).optJSONObject("retweeted_status");
                 if (tweet != null) {
-                    Log.d("Twitter", tweet.toString());
+                    if (BuildConfig.DEBUG) Log.d("Twitter", tweet.toString());
+                    final String id = tweet.getString("id_str");
                     final String text = tweet.getString("text");
                     final JSONObject user = tweet.getJSONObject("user");
                     final String screen_name = user.getString("screen_name");
@@ -56,6 +57,7 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
                                     .title("@" + screen_name)
                                     .imageUri(Uri.parse(media_url))
                                     .viewIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(photo.getString("expanded_url"))))
+                                    .token(id)
                                     .build());
                             break tweetsloop;
                         }
