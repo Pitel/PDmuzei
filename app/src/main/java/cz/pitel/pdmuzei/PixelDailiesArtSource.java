@@ -12,6 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -80,6 +81,6 @@ public class PixelDailiesArtSource extends RemoteMuzeiArtSource {
         if (minutes < 1) {
             minutes = 1;
         }
-        scheduleUpdate(System.currentTimeMillis() + minutes * 60 * 1000);
+        scheduleUpdate(System.currentTimeMillis() + TimeUnit.MINUTES.toMillis(minutes));
     }
 }
